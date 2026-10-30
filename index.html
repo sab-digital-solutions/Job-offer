@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101B2C">
+  <title>SAB Digital Solutions · عرض خاص</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button id="sound" class="sound" type="button" aria-label="تشغيل/إيقاف الصوت">🔊</button>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- الشاشة 0: الافتتاح -->
+  <section class="screen active" id="s-intro">
+    <img src="logo.png" class="logo" alt="SAB Digital Solutions">
+    <p id="typed" class="typed" aria-live="polite"></p>
+  </section>
+
+  <!-- الشاشة 1: العرض -->
+  <section class="screen" id="s-offer">
+    <div class="card">
+      <div class="mono" aria-hidden="true">SAB</div>
+      <h1>عنا موضوع صغير بدنا نحكي معك فيه... 👀</h1>
+      <p>بصراحة، شايفين إنه ممكن نعمل أشياء حلوة مع بعض!</p>
+      <p>شو رأيك تنضم لفريق SAB ونبدأ رحلة شغل وأفكار ومشاريع جديدة سوا؟</p>
+      <div class="actions">
+        <button id="yes" class="btn yes" type="button">موافق! وين أوقّع؟ 😎</button>
+        <div class="no-slot"><button id="no" class="btn no" type="button">لا، مش مهتم 🙄</button></div>
+      </div>
+    </div>
+  </section>
+  <div id="bubble" class="bubble" role="status" aria-live="polite"></div>
+
+  <!-- الشاشة 2: الاحتفال والعقد -->
+  <section class="screen" id="s-win">
+    <div class="card">
+      <div class="mono" aria-hidden="true">SAB</div>
+      <h1>ياااا أهلاً بالشريك الجديد! 🎉</h1>
+      <p>واضح إنه رح نعمل شغل حلو سوا!</p>
+      <p>متحمسين نبدأ هالرحلة ونشوف الأفكار والمشاريع اللي رح نشتغل عليها.</p>
+
+      <div class="paper">
+        <h2>عقد شراكة (شبه رسمي) 📜</h2>
+        <ul id="clauses" class="clauses"></ul>
+        <div class="sign-label">توقيعك هون 👇</div>
+        <div class="pad-wrap">
+          <canvas id="pad" aria-label="مساحة التوقيع"></canvas>
+          <span id="padHint" class="pad-hint">وقّع بإصبعك أو بالماوس</span>
+        </div>
+        <button id="clear" class="link" type="button">مسح التوقيع</button>
+      </div>
+
+      <a id="talk" class="btn yes talk" target="_blank" rel="noopener">خلينا نحكي بالتفاصيل</a>
+      <p id="talkNote" class="note"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
